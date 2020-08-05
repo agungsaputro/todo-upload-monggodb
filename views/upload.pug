@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    form(action=`/users` method="post" enctype="multipart/form-data")
+        .form-group
+            label(for="exampleInputEmail1") title
+            input.form-control(type="text"  name="title")
+        .form-group
+            label(for="exampleInputEmail1") description
+            input.form-control(type="text"  name="description")
+        .form-group
+            label(for="exampleInputEmail1") Photo
+            input.form-control(type="file"  name="photo")
+            //- input(type="hidden" value=id name="userId")
+        button.btn.btn-primary(type="submit") Add Photo
