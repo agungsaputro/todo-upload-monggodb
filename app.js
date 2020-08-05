@@ -5,7 +5,6 @@ var http = require('http');
 var mongoose = require('mongoose');
 var routes = require('./routes');
 var tasks = require('./routes/tasks');
-var upload = require ('./routes/uploadIndex')
 
 var favicon = require('serve-favicon'),
   logger = require('morgan'),
@@ -74,7 +73,6 @@ app.param('task_id', function(req, res, next, taskId) {
 
 
 app.get('/', routes.index);
-app.get('/',)
 app.get('/tasks', tasks.list);
 app.post('/tasks', tasks.markAllCompleted);
 app.post('/tasks', tasks.add);
