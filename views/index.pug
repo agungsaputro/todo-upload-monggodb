@@ -5,7 +5,7 @@ block content
     h2 Menu
     ul.nav.nav-pills
       li.active
-        a(href="/tasks") Upload
+        a(href="/tasks") Home
       li
         a(href="/tasks") Todo List
       li
@@ -21,14 +21,6 @@ block content
         .form-group
             label(for="exampleInputEmail1") Photo
             input.form-control(type="file"  name="photo")
-            if msg == 1
-              .succes
-                Photo uploaded succesfully
-            else if msg == 2
-              .error
-                  File size too large
-            else if msg == 3
-                  Invalid file type. Only JPG, PNG or GIF file are allowed.
             //- input(type="hidden" value=id name="userId")
         button.btn.btn-primary(type="submit") Add Photo
 

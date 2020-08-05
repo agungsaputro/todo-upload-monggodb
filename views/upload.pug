@@ -1,8 +1,20 @@
 extends layout
 
 block content
-    form(action=`/users` method="post" enctype="multipart/form-data")
-        .form-group
+    .menu
+    h2 Menu
+    ul.nav.nav-pills
+      li
+        a(href='/') Home
+      li
+        a(href='/tasks') Todo List
+      li
+        a(href="/tasks/completed") Completed
+      li.active
+        a(href="/tasks/upload") Upload
+  h1= title
+    .container
+         .form-group
             label(for="exampleInputEmail1") title
             input.form-control(type="text"  name="title")
         .form-group
@@ -13,3 +25,4 @@ block content
             input.form-control(type="file"  name="photo")
             //- input(type="hidden" value=id name="userId")
         button.btn.btn-primary(type="submit") Add Photo
+
